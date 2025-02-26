@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class ExemploScanner {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        // ler dois valores valores inteiros e calcular as 5 operaçoes entre os valores;
+        int a, b, soma, sub, multi, divi, resto;
+
+        System.out.println("Informe 2 numeros inteiros");
+        a = in.nextInt();
+        b = in.nextInt();
+
+        soma = a + b;
+        sub = a - b;
+        multi = a * b;
+        divi = a / b;
+        resto = a % b;
+
+        System.out.println("Sua soma é: " + soma);
+        System.out.println("Sua subtração (a - b) é: " + sub);
+        System.out.println("Sua multiplicação (a / b) é: " + multi);
+        System.out.println("Sua divisão é: " + divi);
+        System.out.println("Seu resto é: " + resto);
+
+        // criar uma variavel boolean e verificar se o primeiro valor é maior que o segundo
+
+        boolean maior;
+
+        if (a > b) {
+            maior = true;
+        }
+        else {
+            maior = false;
+        }
+        System.out.println("O inteiro A é maior que o inteiro B? " + maior);
+
+        // criar uma outra variavel boolean e verificar se o primeiro valor é multiplo do segundo
+
+        boolean multiplo;
+
+        if (a % b == 0) {
+            multiplo = true;
+        }
+       
+        else {
+            multiplo = false;
+        }
+        
+        System.out.println("O inteiro A é multiplo do inteiro B? " + multiplo);
+        in.close();
+    }
+}
